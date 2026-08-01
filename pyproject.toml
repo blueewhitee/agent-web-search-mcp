@@ -1,0 +1,21 @@
+[project]
+name = "agent-web-search-mcp"
+version = "0.1.0"
+description = "Standalone MCP server for the Nature-based Search API (stdio wrapper)."
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.28,<2",
+    "httpx>=0.27",
+    "pydantic>=2.0",
+]
+
+[project.scripts]
+agent-web-search-mcp = "mcp_server.server:main"
+
+[build-system]
+requires = ["uv_build>=0.5.0,<1.0.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "mcp_server"
+module-root = "src"
