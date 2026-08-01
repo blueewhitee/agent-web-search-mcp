@@ -1,4 +1,4 @@
-"""MCP server for Nature-based Search API.
+"""MCP server for Agent Web Search.
 
 Thin stdio wrapper — delegates all work to the FastAPI. No business logic.
 Connect any MCP-compatible agent (Claude Desktop, Cursor, Pi, etc.) to get
@@ -7,7 +7,7 @@ web search as a tool.
 Usage:
     uv run python -m mcp_server.server          # stdio (default)
     mcp dev mcp_server/server.py                # inspector (test in browser)
-    NATURE_SE_API_URL=http://localhost:8000 uv run python -m mcp_server.server
+    AGENT_WEB_SEARCH_API_URL=http://localhost:8000 uv run python -m mcp_server.server
 """
 
 from __future__ import annotations
@@ -20,8 +20,8 @@ from pydantic import BaseModel, ConfigDict, Field
 
 # ── Server ────────────────────────────────────────────────────
 
-mcp = FastMCP("nature_search_mcp")
-API_URL = os.getenv("NATURE_SE_API_URL", "http://localhost:8000")
+mcp = FastMCP("agent_web_search_mcp")
+API_URL = os.getenv("AGENT_WEB_SEARCH_API_URL", "http://localhost:8000")
 
 # ── Input schema ──────────────────────────────────────────────
 

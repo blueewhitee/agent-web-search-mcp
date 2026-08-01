@@ -28,14 +28,14 @@ Add this to your MCP config (e.g. `~/.pi/agent/mcp.json` for Pi,
     "agent-web-search": {
       "command": "agent-web-search-mcp",
       "env": {
-        "NATURE_SE_API_URL": "http://localhost:8000"
+        "AGENT_WEB_SEARCH_API_URL": "http://localhost:8000"
       }
     }
   }
 }
 ```
 
-`NATURE_SE_API_URL` defaults to `http://localhost:8000` — set it to wherever your
+`AGENT_WEB_SEARCH_API_URL` defaults to `http://localhost:8000` — set it to wherever your
 engine is reachable.
 
 ## What you get
